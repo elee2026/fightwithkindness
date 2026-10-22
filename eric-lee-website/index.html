@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Eric Lee: aspiring physician-scientist working on gene editing and community eye health. Penn biochemistry, Harvard Medical School.">
+<meta name="description" content="Eric Lee: Penn biochemistry graduate and incoming Harvard Medical School student working on gene editing and community eye health.">
 <meta property="og:title" content="Eric Lee">
-<meta property="og:description" content="Aspiring physician-scientist · Gene editing & community health">
+<meta property="og:description" content="Penn ’26 · Harvard Medical School">
 <meta property="og:image" content="headshot.jpg">
 <link rel="icon" href="headshot.jpg">
 <title>Eric Lee</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 
 <style>
-/* Layout: single narrow reading column; mono eyebrow labels and hairline rules mark each section, like entries in a lab notebook. */
 :root{
   --bg:#F3F5F3;
   --surface:#FFFFFF;
@@ -21,9 +20,9 @@
   --muted:#5A6B65;
   --accent:#0E6E5C;
   --rule:#D3DBD7;
-  --font-display:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --font-body:"Newsreader",Georgia,"Times New Roman",serif;
-  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --font-display:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-mono:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
   --measure:34rem;
 }
 @media (prefers-color-scheme: dark){
@@ -89,18 +88,17 @@ img{display:block;max-width:100%}
 .identity{min-width:0;display:flex;flex-direction:column;gap:.85rem;align-items:flex-start}
 h1{
   font-family:var(--font-display);
-  font-weight:400;
-  font-size:clamp(3rem,10vw,4.5rem);
-  line-height:.95;
-  letter-spacing:-.01em;
+  font-weight:700;
+  font-size:clamp(2.6rem,9vw,3.75rem);
+  line-height:1;
+  letter-spacing:-.02em;
   margin:0;
   text-wrap:balance;
 }
 .standfirst{
   font-family:var(--font-mono);
-  font-size:.75rem;
-  letter-spacing:.09em;
-  text-transform:uppercase;
+  font-size:1rem;
+  font-weight:500;
   color:var(--muted);
   line-height:1.6;
   margin:0;
@@ -108,8 +106,7 @@ h1{
 }
 .btn{
   display:inline-flex;align-items:center;gap:.55rem;
-  font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;
-  text-transform:uppercase;
+  font-family:var(--font-mono);font-size:.9rem;font-weight:600;
   color:var(--bg);background:var(--accent);
   padding:.6rem 1.05rem;border-radius:999px;border:none;
   margin-top:.15rem;
@@ -125,8 +122,7 @@ nav.toc{
   border-bottom:1px solid var(--rule);
 }
 nav.toc a{
-  font-family:var(--font-mono);font-size:.74rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--muted);border-bottom:none;
+  font-family:var(--font-mono);font-size:.9rem;font-weight:500;color:var(--muted);border-bottom:none;
 }
 nav.toc a:hover{color:var(--accent)}
 
@@ -138,8 +134,8 @@ section{padding-block:3rem 0}
   margin:0 0 .5rem;
 }
 h2{
-  font-family:var(--font-display);font-weight:400;
-  font-size:clamp(1.9rem,5vw,2.6rem);
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(1.6rem,4.5vw,2.1rem);letter-spacing:-.01em;
   line-height:1.1;margin:0 0 1.4rem;
   text-wrap:balance;
 }
@@ -168,11 +164,11 @@ figure{margin:0;display:flex;flex-direction:column;gap:.5rem}
 .plate--cv{max-width:30rem}
 .collage{width:100%;height:auto;border-radius:3px}
 figcaption{
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;
+  font-family:var(--font-mono);font-size:.82rem;
   color:var(--muted);line-height:1.5;
 }
 .filelink{
-  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.05em;
+  font-family:var(--font-mono);font-size:.85rem;font-weight:500;
 }
 
 /* ---- placeholder slot for missing attachments ---- */
@@ -206,7 +202,7 @@ figcaption{
 footer{
   margin-top:4rem;padding-top:1.25rem;
   border-top:1px solid var(--rule);
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;
+  font-family:var(--font-mono);font-size:.82rem;
   color:var(--muted);
   display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
 }
@@ -228,7 +224,7 @@ footer{
     <img class="portrait" src="headshot.jpg" alt="Eric Lee">
     <div class="identity">
       <h1>Eric Lee</h1>
-      <p class="standfirst">Aspiring physician-scientist · Gene editing &amp; community health<br>Penn ’26 · Harvard Medical School</p>
+      <p class="standfirst">Penn ’26 · Harvard Medical School</p>
       <a class="btn" href="https://www.linkedin.com/in/ericlovesscience/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.001A2.5 2.5 0 014.98 3.5zM3 8.98h4v12.02H3V8.98zM9.5 8.98h3.83v1.64h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12v6.32h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-4V8.98z"/></svg>
         Connect on LinkedIn
@@ -245,15 +241,13 @@ footer{
   </nav>
 
   <section id="about">
-    <p class="eyebrow">01 — Introduction</p>
     <h2>About me</h2>
-    <p>Hi! My name is Eric, and I’m a recent college graduate and aspiring physician-scientist. I grew up in Mountain Lakes, NJ; studied biochemistry at the University of Pennsylvania (shoutout to the Vagelos Molecular Life Sciences Program) in Philadelphia; and will attend Harvard Medical School in Boston next fall.</p>
+    <p>Hi! My name is Eric, and I’m a recent college graduate and aspiring physician-scientist. I grew up in Mountain Lakes, NJ; studied biochemistry and biophysics at the University of Pennsylvania (shoutout to the Vagelos Molecular Life Sciences Program) in Philadelphia; and will attend Harvard Medical School in Boston next fall.</p>
     <p>Though new developments in programmable biology and cell/gene therapy are what keep me up scrolling at night, I also enjoy learning about public health interventions and engaging with those that affect unhoused communities. I’m most enthusiastic about technologies and community-based initiatives that level disparities in health and quality of life.</p>
     <p>In my free time, I enjoy running with a podcast handy, listening to and playing music, and exploring the outdoors with my friends and family.</p>
   </section>
 
   <section id="mission">
-    <p class="eyebrow">02 — What I work on</p>
     <h2>Interests and Mission</h2>
     <p>I am a co-founder of <a href="https://www.linkedin.com/company/shared-vision-upenn/posts/?viewAsMember=true" target="_blank" rel="noopener">Shared Vision</a>, a community health nonprofit that aims to extend eye care to unhoused individuals in Philadelphia. Its mission was largely inspired by my summer as an undergraduate intern at the <a href="https://casistudentprograms.wordpress.com/2023/06/19/hey-your-eyes-are-beautiful/" target="_blank" rel="noopener">Aravind Eye Hospital</a>, where I learned about the scalability and transformative power of affordable eye care, and my time as a board member at <a href="https://www.shopupenn.org/" target="_blank" rel="noopener">Shelter Health Outreach Program</a>, which ran weekly shifts across Philadelphia’s shelters wherein undergraduates offered blood pressure readings to guests. Shared Vision partners with Penn’s Scheie Eye Institute to schedule mobile eye screenings with its <a href="https://opticlab.med.upenn.edu/schedule-a-screening" target="_blank" rel="noopener">van</a> at local community health fairs and shelters in the city, and we also work with university students to coordinate our patients’ social needs and provide eye health educational workshops. Though the scope of our work currently encompasses only Philadelphia, I hope that Shared Vision will eventually serve as a conduit between urban populations and university health systems across the US.</p>
     <p>Another large part of my undergraduate experience was my work in the <a href="https://www.research.chop.edu/peranteau-laboratory" target="_blank" rel="noopener">William Peranteau Lab</a> at the Children’s Hospital of Philadelphia, where I researched CRISPR-based gene editing strategies for the treatment of congenital disorders. More than the problem-solving skills and familiarity with scientific literature that research builds, the knowledge that CRISPR technology could create customizable therapies for patients desperate for treatment stuck with me. The promise of programmable biology that excites me most lies in creating sustainable, bespoke therapies that are compatible with individual patients’ physiology—potential cures that did not exist before. Beyond finding therapies for the “n of 1” cases that affect rare patients, I am also interested in using programmable biology tools to treat cancers and ageing disorders that a growing number of Americans live with. In the next step beyond the laboratory and clinic, I hope to eventually tackle the challenge of allocating these tools to the least-resourced patients who need them most.</p>
@@ -261,7 +255,6 @@ footer{
   </section>
 
   <section id="research">
-    <p class="eyebrow">03 — Selected work</p>
     <h2>Research Projects</h2>
 
     <div class="entries">
@@ -303,7 +296,6 @@ footer{
   </section>
 
   <section id="cv">
-    <p class="eyebrow">04 — Curriculum vitae</p>
     <h2>CV</h2>
     <p>Below is a summary of my projects, all in one place. If any of this interests you, please reach out, and I would love to connect!</p>
     <figure style="margin-top:1.25rem">
@@ -315,7 +307,6 @@ footer{
   </section>
 
   <section id="hobbies">
-    <p class="eyebrow">05 — Outside the lab</p>
     <h2>Hobbies</h2>
 
     <div class="entries">
