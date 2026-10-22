@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Eric Lee: Penn biochemistry graduate and incoming Harvard Medical School student working on gene editing and community eye health.">
+<meta property="og:title" content="Eric Lee">
+<meta property="og:description" content="Penn ’26 · Harvard Medical School">
+<meta property="og:image" content="headshot.jpg">
+<link rel="icon" href="headshot.jpg">
+<title>Eric Lee</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<style>
+:root{
+  --bg:#F3F5F3;
+  --surface:#FFFFFF;
+  --ink:#131D1A;
+  --muted:#5A6B65;
+  --accent:#0E6E5C;
+  --rule:#D3DBD7;
+  --font-display:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-mono:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --measure:34rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1513;
+    --surface:#16201D;
+    --ink:#E8EFEB;
+    --muted:#9AAFA7;
+    --accent:#5FC9AC;
+    --rule:#2A3733;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1513;
+  --surface:#16201D;
+  --ink:#E8EFEB;
+  --muted:#9AAFA7;
+  --accent:#5FC9AC;
+  --rule:#2A3733;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:46rem;
+  margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 4rem;
+}
+p{margin:0 0 1.05em;max-width:var(--measure)}
+p:last-child{margin-bottom:0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 40%,transparent);transition:border-color .15s ease}
+a:hover{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+img{display:block;max-width:100%}
+
+/* ---- header ---- */
+.masthead{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:1.75rem;
+  padding-block:3.25rem 2.25rem;
+}
+.portrait{
+  width:9.5rem;height:9.5rem;
+  flex:0 0 auto;
+  border-radius:50%;
+  object-fit:cover;
+  background:var(--surface);
+  box-shadow:0 0 0 1px var(--rule);
+}
+.identity{min-width:0;display:flex;flex-direction:column;gap:.85rem;align-items:flex-start}
+h1{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(2.6rem,9vw,3.75rem);
+  line-height:1;
+  letter-spacing:-.02em;
+  margin:0;
+  text-wrap:balance;
+}
+.standfirst{
+  font-family:var(--font-mono);
+  font-size:1rem;
+  font-weight:500;
+  color:var(--muted);
+  line-height:1.6;
+  margin:0;
+  max-width:none;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--font-mono);font-size:.9rem;font-weight:600;
+  color:var(--bg);background:var(--accent);
+  padding:.6rem 1.05rem;border-radius:999px;border:none;
+  margin-top:.15rem;
+}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn svg{width:.95em;height:.95em;fill:currentColor}
+
+/* ---- nav ---- */
+nav.toc{
+  display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;
+  padding-block:1rem;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+nav.toc a{
+  font-family:var(--font-mono);font-size:.9rem;font-weight:500;color:var(--muted);border-bottom:none;
+}
+nav.toc a:hover{color:var(--accent)}
+
+/* ---- sections ---- */
+section{padding-block:3rem 0}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);
+  margin:0 0 .5rem;
+}
+h2{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(1.6rem,4.5vw,2.1rem);letter-spacing:-.01em;
+  line-height:1.1;margin:0 0 1.4rem;
+  text-wrap:balance;
+}
+h3{
+  font-family:var(--font-body);font-weight:600;
+  font-size:1.05rem;line-height:1.35;
+  margin:0 0 .35rem;
+  text-decoration:underline;
+  text-decoration-color:color-mix(in srgb,var(--accent) 55%,transparent);
+  text-underline-offset:.22em;
+}
+
+/* ---- project entries ---- */
+.entries{display:flex;flex-direction:column;gap:2.75rem}
+.entry{display:flex;flex-direction:column;gap:1rem}
+.entry > p{margin-bottom:0}
+figure{margin:0;display:flex;flex-direction:column;gap:.5rem}
+.plate{
+  border:1px solid var(--rule);
+  background:var(--surface);
+  border-radius:3px;
+  overflow:hidden;
+}
+.plate img{width:100%;height:auto}
+.plate--portrait{max-width:20rem}
+.plate--cv{max-width:30rem}
+.collage{width:100%;height:auto;border-radius:3px}
+figcaption{
+  font-family:var(--font-mono);font-size:.82rem;
+  color:var(--muted);line-height:1.5;
+}
+.filelink{
+  font-family:var(--font-mono);font-size:.85rem;font-weight:500;
+}
+
+/* ---- placeholder slot for missing attachments ---- */
+.slot{
+  border:1px dashed var(--rule);
+  border-radius:3px;
+  padding:1.15rem 1.25rem;
+  color:var(--muted);
+  font-family:var(--font-mono);
+  font-size:.76rem;
+  line-height:1.6;
+  letter-spacing:.02em;
+  background:color-mix(in srgb,var(--surface) 55%,transparent);
+}
+.slot strong{color:var(--ink);font-weight:500;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.3rem;font-size:.7rem}
+
+/* ---- books ---- */
+.books{
+  list-style:none;margin:1.25rem 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));
+  gap:.1rem 2rem;
+}
+.books li{
+  padding:.5rem 0;
+  border-bottom:1px solid var(--rule);
+  font-size:1rem;
+  min-width:0;
+}
+.lede{font-weight:600;margin-bottom:.25rem}
+
+footer{
+  margin-top:4rem;padding-top:1.25rem;
+  border-top:1px solid var(--rule);
+  font-family:var(--font-mono);font-size:.82rem;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
+}
+
+@media (max-width:30rem){
+  .masthead{gap:1.25rem;padding-block:2.25rem 1.75rem}
+  .portrait{width:7rem;height:7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <img class="portrait" src="headshot.jpg" alt="Eric Lee">
+    <div class="identity">
+      <h1>Eric Lee</h1>
+      <p class="standfirst">Penn ’26 · Harvard Medical School</p>
+      <a class="btn" href="https://www.linkedin.com/in/ericlovesscience/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5.001A2.5 2.5 0 014.98 3.5zM3 8.98h4v12.02H3V8.98zM9.5 8.98h3.83v1.64h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12v6.32h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-4V8.98z"/></svg>
+        Connect on LinkedIn
+      </a>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Sections">
+    <a href="#about">About me</a>
+    <a href="#mission">Interests &amp; Mission</a>
+    <a href="#research">Research Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>Hi! My name is Eric, and I’m a recent college graduate and aspiring physician-scientist. I grew up in Mountain Lakes, NJ; studied biochemistry and biophysics at the University of Pennsylvania (shoutout to the Vagelos Molecular Life Sciences Program) in Philadelphia; and will attend Harvard Medical School in Boston next fall.</p>
+    <p>Though new developments in programmable biology and cell/gene therapy are what keep me up scrolling at night, I also enjoy learning about public health interventions and engaging with those that affect unhoused communities. I’m most enthusiastic about technologies and community-based initiatives that level disparities in health and quality of life.</p>
+    <p>In my free time, I enjoy running with a podcast handy, listening to and playing music, and exploring the outdoors with my friends and family.</p>
+  </section>
+
+  <section id="mission">
+    <h2>Interests and Mission</h2>
+    <p>I am a co-founder of <a href="https://www.linkedin.com/company/shared-vision-upenn/posts/?viewAsMember=true" target="_blank" rel="noopener">Shared Vision</a>, a community health nonprofit that aims to extend eye care to unhoused individuals in Philadelphia. Its mission was largely inspired by my summer as an undergraduate intern at the <a href="https://casistudentprograms.wordpress.com/2023/06/19/hey-your-eyes-are-beautiful/" target="_blank" rel="noopener">Aravind Eye Hospital</a>, where I learned about the scalability and transformative power of affordable eye care, and my time as a board member at <a href="https://www.shopupenn.org/" target="_blank" rel="noopener">Shelter Health Outreach Program</a>, which ran weekly shifts across Philadelphia’s shelters wherein undergraduates offered blood pressure readings to guests. Shared Vision partners with Penn’s Scheie Eye Institute to schedule mobile eye screenings with its <a href="https://opticlab.med.upenn.edu/schedule-a-screening" target="_blank" rel="noopener">van</a> at local community health fairs and shelters in the city, and we also work with university students to coordinate our patients’ social needs and provide eye health educational workshops. Though the scope of our work currently encompasses only Philadelphia, I hope that Shared Vision will eventually serve as a conduit between urban populations and university health systems across the US.</p>
+    <p>Another large part of my undergraduate experience was my work in the <a href="https://www.research.chop.edu/peranteau-laboratory" target="_blank" rel="noopener">William Peranteau Lab</a> at the Children’s Hospital of Philadelphia, where I researched CRISPR-based gene editing strategies for the treatment of congenital disorders. More than the problem-solving skills and familiarity with scientific literature that research builds, the knowledge that CRISPR technology could create customizable therapies for patients desperate for treatment stuck with me. The promise of programmable biology that excites me most lies in creating sustainable, bespoke therapies that are compatible with individual patients’ physiology—potential cures that did not exist before. Beyond finding therapies for the “n of 1” cases that affect rare patients, I am also interested in using programmable biology tools to treat cancers and ageing disorders that a growing number of Americans live with. In the next step beyond the laboratory and clinic, I hope to eventually tackle the challenge of allocating these tools to the least-resourced patients who need them most.</p>
+    <p>Broadly, I identify my mission as bridging gaps between haves and have-nots through simultaneous technical advancement and community engagement; it is my conviction that uniting eclectic fields unleashes their full potential. Toward this goal, I have explored ways to reach underserved individuals through projects spanning science, public health, and policy. I hope to continue exploring interdisciplinary initiatives that put people at the center in my next 8+ years of medical training, and I hope to see you along the way!</p>
+  </section>
+
+  <section id="research">
+    <h2>Research Projects</h2>
+
+    <div class="entries">
+
+      <article class="entry">
+        <h3>University of Pennsylvania Master of Chemical Sciences Thesis</h3>
+        <p>My Master’s thesis summarizes all the projects that I contributed to in the William Peranteau Lab, which showed me just how diverse and customizable gene editing tools are.</p>
+        <figure>
+          <a class="plate plate--portrait" href="thesis.pdf" target="_blank" rel="noopener">
+            <img src="thesis-cover.jpg" alt="Title page of the thesis, CRISPR Genome Editing for In Utero Treatment of Monogenic Disorders">
+          </a>
+          <figcaption><em>CRISPR Genome Editing for In Utero Treatment of Monogenic Disorders</em> · 71 pp.<br><a class="filelink" href="thesis.pdf" target="_blank" rel="noopener">Read the full thesis (PDF)</a></figcaption>
+        </figure>
+      </article>
+
+      <article class="entry">
+        <h3>William Peranteau Lab Research Poster</h3>
+        <p>The poster below summarizes one of my favorite projects in the William Peranteau Lab, and it is one that I have presented at several classroom talks and undergraduate research conferences.</p>
+        <figure>
+          <a class="plate" href="poster.pdf" target="_blank" rel="noopener">
+            <img src="poster.jpg" alt="Research poster: In Utero Gene Editing for Treatment of Duchenne Muscular Dystrophy">
+          </a>
+          <figcaption><em>In Utero Gene Editing for Treatment of Duchenne Muscular Dystrophy: Systemic Delivery of Lipid Nanoparticles and Therapeutic Base Editing</em><br><a class="filelink" href="poster.pdf" target="_blank" rel="noopener">Open the poster (PDF)</a></figcaption>
+        </figure>
+      </article>
+
+      <article class="entry">
+        <h3>Philadelphia Association of Community Development Corporations White Paper</h3>
+        <p>To me, policy research is an extension of the scientific process that touches lives directly. I began working with <a href="https://pacdc.org/" target="_blank" rel="noopener">PACDC</a> to explore policy solutions for improving accessibility to health services and reducing healthcare costs.</p>
+        <figure>
+          <a class="plate plate--portrait" href="whitepaper.pdf" target="_blank" rel="noopener">
+            <img src="whitepaper-cover.jpg" alt="First page of the white paper, Affordable Housing: Philadelphia’s Next Healthcare Frontier">
+          </a>
+          <figcaption><em>Affordable Housing: Philadelphia’s Next Healthcare Frontier</em> · with Garrett O’Dwyer · 14 pp.<br><a class="filelink" href="whitepaper.pdf" target="_blank" rel="noopener">Read the white paper (PDF)</a></figcaption>
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Below is a summary of my projects, all in one place. If any of this interests you, please reach out, and I would love to connect!</p>
+    <figure style="margin-top:1.25rem">
+      <a class="plate plate--cv" href="cv.pdf" target="_blank" rel="noopener">
+        <img src="cv-preview.jpg" alt="First page of Eric Lee’s CV: education, honors and awards">
+      </a>
+      <figcaption>Page 1 of 4<br><a class="filelink" href="cv.pdf" target="_blank" rel="noopener">Download the full CV (PDF)</a></figcaption>
+    </figure>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+
+    <div class="entries">
+      <article class="entry">
+        <figure>
+          <img class="collage" src="hobbies.jpg" alt="Four photos: friends posing in my dad’s garden before high school prom; me and three friends holding string instruments after performing Beethoven String Quartet No. 7; me after the Philadelphia Marathon holding a ‘Run Eric Run’ sign; climbing a via ferrata rock face with friends and family.">
+        </figure>
+      </article>
+
+      <article class="entry">
+        <p class="lede">Some of my favorite pleasure reads:</p>
+        <ul class="books">
+          <li>The Three-Body Problem</li>
+          <li>The Thursday Murder Club</li>
+          <li>The Martian</li>
+          <li>The Worlds I See</li>
+          <li>Why We Sleep</li>
+          <li>Interior Chinatown</li>
+          <li>Pachinko</li>
+          <li>The Sympathizer</li>
+          <li>Moonwalk</li>
+          <li>Mountains Beyond Mountains</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <span>Eric Lee · Philadelphia, PA</span>
+    <span><a href="https://www.linkedin.com/in/ericlovesscience/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </footer>
+
+</div>
+
+</body>
+</html>
