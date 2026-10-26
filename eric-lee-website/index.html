@@ -208,6 +208,15 @@ figcaption{
   min-width:0;
 }
 .lede{font-weight:600;margin-bottom:.25rem}
+.entry > .filelink{align-self:flex-start}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.posts li{border-bottom:1px solid var(--rule)}
+.posts a{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;padding:.85rem 0;border-bottom:none;color:var(--ink)}
+.posts a:hover .post-title{color:var(--accent-2)}
+.post-title{font-family:var(--font-display);font-weight:600;color:var(--accent);transition:color .15s ease}
+.post-date{font-family:var(--font-display);font-size:.82rem;color:var(--muted);white-space:nowrap;align-self:baseline}
+.post-blurb{grid-column:1 / -1;font-size:.98rem;color:var(--muted)}
+@media (max-width:30rem){.posts a{grid-template-columns:1fr}.post-date{grid-row:2}}
 
 .stripe{height:6px;background:linear-gradient(to bottom,var(--accent) 0 50%,var(--accent-2) 50% 100%)}
 
@@ -262,7 +271,7 @@ footer{
 
   <section id="mission">
     <h2>Interests and Mission</h2>
-    <p>I am a co-founder of <a href="https://www.linkedin.com/company/shared-vision-upenn/posts/?viewAsMember=true" target="_blank" rel="noopener">Shared Vision</a>, a community health nonprofit that aims to extend eye care to unhoused individuals in Philadelphia. Its mission was largely inspired by my summer as an undergraduate intern at the <a href="https://casistudentprograms.wordpress.com/2023/06/19/hey-your-eyes-are-beautiful/" target="_blank" rel="noopener">Aravind Eye Hospital</a>, where I learned about the scalability and transformative power of affordable eye care, and my time as a board member at <a href="https://www.shopupenn.org/" target="_blank" rel="noopener">Shelter Health Outreach Program</a>, which ran weekly shifts across Philadelphia’s shelters wherein undergraduates offered blood pressure readings to guests. Shared Vision partners with Penn’s Scheie Eye Institute to schedule mobile eye screenings with its <a href="https://opticlab.med.upenn.edu/schedule-a-screening" target="_blank" rel="noopener">van</a> at local community health fairs and shelters in the city, and we also work with university students to coordinate our patients’ social needs and provide eye health educational workshops. Though the scope of our work currently encompasses only Philadelphia, I hope that Shared Vision will eventually serve as a conduit between urban populations and university health systems across the US.</p>
+    <p>I am a co-founder of <a href="https://www.linkedin.com/company/shared-vision-upenn/posts/?viewAsMember=true" target="_blank" rel="noopener">Shared Vision</a>, a community health nonprofit that aims to extend eye care to unhoused individuals in Philadelphia. Its mission was largely inspired by my summer as an undergraduate intern at the <a href="https://aravind.org/" target="_blank" rel="noopener">Aravind Eye Hospital</a>, where I learned about the scalability and transformative power of affordable eye care, and my time as a board member at <a href="https://www.shopupenn.org/" target="_blank" rel="noopener">Shelter Health Outreach Program</a>, which ran weekly shifts across Philadelphia’s shelters wherein undergraduates offered blood pressure readings to guests. Shared Vision partners with Penn’s Scheie Eye Institute to schedule mobile eye screenings with its <a href="https://opticlab.med.upenn.edu/schedule-a-screening" target="_blank" rel="noopener">van</a> at local community health fairs and shelters in the city, and we also work with university students to coordinate our patients’ social needs and provide eye health educational workshops. Though the scope of our work currently encompasses only Philadelphia, I hope that Shared Vision will eventually serve as a conduit between urban populations and university health systems across the US.</p>
     <p>Another large part of my undergraduate experience was my work in the <a href="https://www.research.chop.edu/peranteau-laboratory" target="_blank" rel="noopener">William Peranteau Lab</a> at the Children’s Hospital of Philadelphia, where I researched CRISPR-based gene editing strategies for the treatment of congenital disorders. More than the problem-solving skills and familiarity with scientific literature that research builds, the knowledge that CRISPR technology could create customizable therapies for patients desperate for treatment stuck with me. The promise of programmable biology that excites me most lies in creating sustainable, bespoke therapies that are compatible with individual patients’ physiology—potential cures that did not exist before. Beyond finding therapies for the “n of 1” cases that affect rare patients, I am also interested in using programmable biology tools to treat cancers and ageing disorders that a growing number of Americans live with. In the next step beyond the laboratory and clinic, I hope to eventually tackle the challenge of allocating these tools to the least-resourced patients who need them most.</p>
     <p>Broadly, I identify my mission as bridging gaps between haves and have-nots through simultaneous technical advancement and community engagement; it is my conviction that uniting eclectic fields unleashes their full potential. Toward this goal, I have explored ways to reach underserved individuals through projects spanning science, public health, and policy. I hope to continue exploring interdisciplinary initiatives that put people at the center in my next 8+ years of medical training, and I hope to see you along the way!</p>
   </section>
@@ -324,6 +333,7 @@ footer{
 
     <div class="entries">
       <article class="entry">
+        <h3>Some of my favorite things to do:</h3>
         <figure>
           <img class="collage" src="hobbies.jpg" alt="Four photos: friends posing in my dad’s garden before high school prom; me and three friends holding string instruments after performing Beethoven String Quartet No. 7; me after the Philadelphia Marathon holding a ‘Run Eric Run’ sign; climbing a via ferrata rock face with friends and family.">
         </figure>
@@ -332,17 +342,28 @@ footer{
       <article class="entry">
         <p class="lede">Some of my favorite pleasure reads:</p>
         <ul class="books">
-          <li>The Three-Body Problem (Cixin Liu)</li>
-          <li>The Thursday Murder Club (Richard Osman)</li>
-          <li>The Boy Who Harnessed the Wind (William Kamkwamba, Bryan Mealer)</li>
-          <li>The Worlds I See (Fei Fei Li)</li>
-          <li>Why We Sleep (Matthew Walker)</li>
-          <li>Interior Chinatown (Charles Yu)</li>
-          <li>Pachinko (Min Jin Lee)</li>
-          <li>Born a Crime (Trevor Noah)</li>
-          <li>Moonwalk (Michael Jackson)</li>
-          <li>Mountains Beyond Mountains (Tracy Kidder)</li>
+          <li>The Three-Body Problem</li>
+          <li>The Thursday Murder Club</li>
+          <li>The Boy Who Harnessed the Wind</li>
+          <li>The Worlds I See</li>
+          <li>Why We Sleep</li>
+          <li>Interior Chinatown</li>
+          <li>Pachinko</li>
+          <li>Born a Crime</li>
+          <li>Moonwalk</li>
+          <li>Mountains Beyond Mountains</li>
         </ul>
+      </article>
+
+      <article class="entry">
+        <p class="lede">Check out some of my other blog posts:</p>
+        <ul class="posts">
+          <li><a href="https://casistudentprograms.wordpress.com/2023/06/19/hey-your-eyes-are-beautiful/" target="_blank" rel="noopener"><span class="post-title">“Hey, your eyes are beautiful ;)”</span><span class="post-date">June 19, 2023</span><span class="post-blurb">My first two weeks in Delhi and Madurai, and first impressions of Aravind.</span></a></li>
+          <li><a href="https://casistudentprograms.wordpress.com/2023/08/23/monsoon-season/" target="_blank" rel="noopener"><span class="post-title">Monsoon Season</span><span class="post-date">August 23, 2023</span><span class="post-blurb">Adjusting to the changes in schedule, culture, and work over the internship.</span></a></li>
+          <li><a href="https://casistudentprograms.wordpress.com/2023/08/25/my-tips-for-future-aravind-ers/" target="_blank" rel="noopener"><span class="post-title">My tips for future Aravind-ers</span><span class="post-date">August 25, 2023</span><span class="post-blurb">Advice for future interns on project work, curiosity, and taking initiative.</span></a></li>
+          <li><a href="https://casistudentprograms.wordpress.com/2023/09/05/indebted-forever/" target="_blank" rel="noopener"><span class="post-title">Indebted Forever</span><span class="post-date">September 5, 2023</span><span class="post-blurb">Looking back on how the summer changed my views on medicine and eye care.</span></a></li>
+        </ul>
+        <a class="filelink" href="https://casistudentprograms.wordpress.com/author/elee22/" target="_blank" rel="noopener">All my posts on the CASI Student Programs Blog</a>
       </article>
     </div>
   </section>
